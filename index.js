@@ -24,6 +24,7 @@ init({
 // Instantiate class for embedding a Liveboard
 const embed = new LiveboardEmbed('#embed', {
   frameParams: { height: '100vh' },
+  disabledActions: [Action.ShowUnderlyingData, Action.Pin],
   liveboardId:
     '33248a57-cc70-4e39-9199-fb5092283381' /*param-end-liveboardFullHeight*/ /*param-end-modifyActions*/ /*param-end-liveboardId*/ /*param-end-runtimeFilters*/,
   /*param-start-liveboardFullHeight*/
@@ -33,6 +34,6 @@ const embed = new LiveboardEmbed('#embed', {
 
 embed.render();
 
-// document.getElementById('button').addEventListener('click', () => {
-//   embed.trigger('d6b69f39-06bb-48b3-b66f-0e689a17970d-2');
-// });
+document.getElementById('button1').addEventListener('click', () => {
+  embed.trigger('pin-730496d6-6903-4601-937e-2c691821af3c');
+});
